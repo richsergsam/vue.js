@@ -1,7 +1,7 @@
 # vue.js
 My vue.js learning
 
-```Vue
+```vue
 new Vue({
   // ID элемента, который будет родителем для всех объектов vue
   el: "#<id of parent vue element>",
