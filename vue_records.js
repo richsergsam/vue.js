@@ -13,7 +13,7 @@ new Vue({
   */
   methods: {
     function_name: function(<args>){
-      return "value"
+      return "value";
     },
     // Методы могут использоваться в качестве обработчика события.
     // Поумолчанию объект event пробрасывается автоматически.
@@ -21,7 +21,7 @@ new Vue({
       alert(event.target.value)
     },
     // Если нужно объявить параметризованный метод, то параметр event указывается явно через $
-    my_button_keypressed(argumetn, $event){
+    my_button_keypressed: function(argumetn, $event){
       console.log(argument + event.target.value)
     }
   },
