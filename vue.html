@@ -21,7 +21,13 @@
     <!-- Two way binding -->
     <base-checkbox v-model="lovingVue"></base-checkbox>
     <!-- CSS Class manipulation -->
-    <!-- Attach and delete class by bool condition -->
+    <!-- Attach and delete class by bool condition is_attach -->
+	<!-- Лучше создать новое вычисляемое свойство, возвращающее {new_class: is_attach} чтобы упростить HTML -->
+	<!-- Имя класса можно хранить в свойстве и выводить так: :class= "color"  
+	     для нескольких классов массив: :class= "[color, margin]" -->
     <div class="some_other_class" @click="is_attach = !is_attach" :class="{new_class: is_attach}"></div>
+	<!-- Точно так же можно менять не класс целиком, а только стиль :style="{backgroundColor: red}"
+	     Нельзя в {} (объявлении поля объекта) использовать имена свойств с символом "-", 
+		 поэтому заменяем backround-color на backgroundColor-->
   </div>
 </div>
