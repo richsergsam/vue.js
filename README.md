@@ -16,18 +16,18 @@ new Vue({
      !ВАЖНО: при любом изменении ЛЮБОГО поля или свойства объекта vue, метод будет вызываться повторно. 
   */
   methods: {
-    function_name: function(<args>){
-      return "value"
-    },
-    // Методы могут использоваться в качестве обработчика события.
-    // Поумолчанию объект event пробрасывается автоматически.
-    my_button_click: function(){
-      alert(event.target.value)
-    },
-    // Если нужно объявить параметризованный метод, то параметр event указывается явно через $
-    my_button_keypressed(argumetn, $event){
-      console.log(argument + event.target.value)
-    }
+     function_name: function(<args>){
+       return "value"
+     },
+     // Методы могут использоваться в качестве обработчика события.
+     // Поумолчанию объект event пробрасывается автоматически.
+     my_button_click: function(){
+       alert(event.target.value)
+     },
+     // Если нужно объявить параметризованный метод, то параметр event указывается явно через $
+     my_button_keypressed(argumetn, $event){
+       console.log(argument + event.target.value)
+     },
   },
   /* Вычисляемые свойства. Представляет собой функцию, которая вычисляется ТОЛЬКО при изменении полей, от которых она зависит.
      Не может содержать асинхронный код. Должна выполняться сразу, без таймаутов и т.п.
