@@ -1,0 +1,24 @@
+<script src="https://npmcdn.com/vue/dist/vue.js"></script>
+
+<div id="vue_root">
+  <div>
+    <!-- Обращение к полям, свойствам и вызов методов -->
+    <p>Data field: {{ field_name }}</p>
+    <p>Data field: {{ this.data.field_name }}</p>
+    <p>Computed property: {{ property_name }}</p>
+    <p>Method: {{ method_name(args) }}</p>
+    <!-- Обработка событий -->
+    <button @click="event_worker_method">Button</button>
+    <button v-on:click="event_worker_method">Button</button>
+    <button v-on:click.enter="event_worker_method(arg, $event)">Button</button>
+    <!-- Binding -->
+    <img :src="field_name">
+    <img v-bind:src="field_name">
+    <!-- Binding без дальнейших изменений -->
+    <img v-once:src="field_name">
+    <!-- Рендер содержимого поля как HTML -->
+    <div v-html="html"></div>
+    <!-- Two way binding -->
+    <base-checkbox v-model="lovingVue"></base-checkbox>
+  </div>
+</div>
