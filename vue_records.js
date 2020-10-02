@@ -20,8 +20,8 @@ new Vue({
     my_button_click: function(){
       alert(event.target.value)
     },
-    // Если нужно объявить параметризованный метод, то параметр event указывается явно через $
-    my_button_keypressed: function(argumetn, $event){
+    // Если нужно объявить параметризованный метод, то параметр event указывается явно. В HTML он передается через $event.
+    my_button_keypressed: function(argumetn, event){
       console.log(argument + event.target.value)
     }
   },
