@@ -20,5 +20,8 @@
     <div v-html="html"></div>
     <!-- Two way binding -->
     <base-checkbox v-model="lovingVue"></base-checkbox>
+    <!-- CSS Class manipulation -->
+    <!-- Attach and delete class by bool condition -->
+    <div class="some_other_class" @click="is_attach = !is_attach" :class="{new_class: is_attach}"></div>
   </div>
 </div>
